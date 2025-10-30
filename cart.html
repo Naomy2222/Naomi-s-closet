@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | Naomi’s Closet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+ <header>
+  <div class="logo">Naomi’s Closet</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" id="logoutLink" style="display:none;">Logot</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Cart Section -->
+  <section class="cart-section">
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+      <h2>Total: KSh <span id="total-price">0</span></h2>
+      <button id="checkout-btn">Checkout</button>
+      <a href="checkout.html" class="btn">Proceed to checkout</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Naomi’s Closet | Designed with 💕 by Team Naomi</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
