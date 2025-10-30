@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naomi’s Trendy Closet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <h2 id="welcomeMessage"></h2>
+  <div class="logo">Naomi’s Closet</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="cart.html">Cart</a></li>
+      <li><a href="checkout.html">Checkout</a></li>
+       <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html" id="logoutLink" style="display:none;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Stay Trendy, Stay You</h1>
+      <p>Discover colorful, modern styles that match your vibe 💖</p>
+      <a href="products.html" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Naomi’s Closet | Designed with 💕 by Team Naomi</p>
+  </footer>
+
+  <script>
+  const loggedInUser = localStorage.getItem('loggedInUser');
+  const welcomeElement = document.getElementById('welcomeMessage');
+
+  if (loggedInUser && welcomeElement) {
+    welcomeElement.textContent = `Welcome, ${loggedInUser} 👋;`
+  } else {
+    welcomeElement.textContent = "Welcome to Naomi's Closet 🛍";
+  }
+const loginLink = document.querySelector('a[href="login.html"]');
+const logoutLink = document.getElementById('logoutLink');
+
+if (loggedInUser) {
+  if (loginLink) loginLink.style.display = 'none';
+  if (logoutLink) logoutLink.style.display = 'inline';
+} else {
+  if (loginLink) loginLink.style.display = 'inline';
+  if (logoutLink) logoutLink.style.display = 'none';
+}
+</script>
+  <script src="script.js"></script>
+</body>
+</html>
